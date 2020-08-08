@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* 초기화 */
+body, h1, h2, h3, p, ul {margin:0; padding:0;}
+/* h , p , ul 태그에도 여백이 있기때문에 모두 없애준다
+ul은 마진과 패딩 둘 다 갖고 있다 */
+ul li {list-style: none;}
+hr {display: none;} /* 영역을 없앤다 */
+a {text-decoration: none;}
+.hidden {position: absolute; top: -50000px;}
+/* 시각적으로 숨김 */
+        /* height: 0; overflow: hidden;
+          font-size: 0;
+         인식못하는 경우도
+         있기때문에 권장하지않는다. */
+body {background: linear-gradient(180deg, #6bdff6 0%, #ffffff 350px) no-repeat;
+      padding: 20px 10px 0 0;
+      font-family: 'ChosunSm';}
+@font-face { font-family: 'DWImpactamin';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/DWImpactamin.woff') format('woff');
+            font-weight: normal; font-style: normal; }
+#header h1 {font-family: 'DWImpactamin';}
+
+/* header */
+#header {height: 164px;
+        background: #fff url(../HTML5/bg_header.png) no-repeat right;
+        border-bottom: 6px solid #942ef7;}
+#header h1 {padding: 70px 0 0 20px;}
+#header p {font-weight: normal; font-size: 16px; padding-left: 20px;}
+
+/* nav */
+#gnb {height: 44px;}
+#gnb ul {float: right;}
+#gnb ul li{float: left; padding-left: 20px; line-height: 44px;}
+/* 순서대로 정렬되려면 먼저 ul 을 오른쪽으로 정렬해줘야한다. 안그러면
+순서가 뒤바뀐다 */
+#gnb ul li a {color: black;}
+#gnb ul li a:hover {color: #3474f1; font-weight: bold; font-size: 20px;}
+
+/* main */
+section {border-style: dotted; border-width: 1px; padding: 20px 10px;}
+#content header {border-bottom: 1px dotted; padding: 10px;}
+#content article h3 { margin: 10px 0 10px 0;}
